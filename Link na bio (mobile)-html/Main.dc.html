@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Link na bio</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1310629647435694');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1310629647435694&ev=PageView&noscript=1"
+/></noscript>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#1A1A1A}
+h1,h2,h3{font-family:'Space Grotesk','Inter',system-ui,sans-serif}
+a{color:#F7F3EC;text-decoration:none}a:hover{color:#F7F3EC}
+a:focus-visible{outline:2px solid #F7F3EC;outline-offset:3px}
+button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px;border-radius:8px}
+@keyframes kvpulse{0%{box-shadow:0 0 0 0 rgba(251,176,59,.6)}70%{box-shadow:0 0 0 7px rgba(251,176,59,0)}100%{box-shadow:0 0 0 0 rgba(251,176,59,0)}}
+@keyframes kvcard{from{clip-path:inset(100% 0 0 0 round 28px)}to{clip-path:inset(0 0 0 0 round 28px)}}
+@keyframes kvwipe{from{translate:0 0}}
+@keyframes kvsettle{from{scale:1.2;filter:blur(8px)}}
+@keyframes kvkb{from{scale:1}to{scale:1.1}}
+@keyframes kvrise{from{opacity:0;translate:0 45%;filter:blur(12px);letter-spacing:.06em}}
+@keyframes kvup{from{opacity:0;translate:0 28px;filter:blur(6px)}}
+@keyframes kvdown{from{opacity:0;translate:0 -16px}}
+@keyframes kvpop{0%{opacity:0;scale:.4;rotate:-18deg}60%{opacity:1;scale:1.08;rotate:4deg}100%{scale:1;rotate:0deg}}
+@keyframes kvpar{to{object-position:50% 16%}}
+@keyframes kvnameout{to{translate:0 -48px;opacity:.1}}
+@keyframes kvzoom{from{scale:1.25}}
+@keyframes kvshine{0%{translate:-100% 0}30%,100%{translate:100% 0}}
+@keyframes kvbar{0%,100%{scale:1 .2}45%,80%{scale:1 1}}
+@keyframes kvgrain{0%,100%{translate:0 0}20%{translate:-4% 3%}40%{translate:3% -5%}60%{translate:-6% -2%}80%{translate:5% 4%}}
+.kv-grain{position:fixed;inset:-50%;z-index:60;pointer-events:none;opacity:.06;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:kvgrain .9s steps(5) infinite}
+.kv-hero{animation:kvcard .7s cubic-bezier(.77,0,.18,1) .1s backwards}
+.kv-hero::before{content:"";position:absolute;inset:0;z-index:3;background:#FBB03B;translate:0 -101%;animation:kvwipe .9s cubic-bezier(.77,0,.18,1) .75s backwards}
+.kv-hero-img{animation:kvsettle 2.2s cubic-bezier(.16,1,.3,1) .75s both,kvkb 18s 2.95s ease-in-out infinite alternate}
+.kv-rise{display:block;animation:kvrise 1.2s cubic-bezier(.16,1,.3,1) 1.3s backwards}
+.kv-rise+.kv-rise{animation-delay:1.45s}
+.kv-up{animation:kvup 1s cubic-bezier(.16,1,.3,1) backwards}
+.kv-down{animation:kvdown .9s cubic-bezier(.16,1,.3,1) .3s backwards}
+.kv-pop{animation:kvpop .8s cubic-bezier(.34,1.56,.64,1) 1.9s backwards}
+.kv-shine{position:relative;overflow:hidden;isolation:isolate}
+.kv-shine::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);translate:-100% 0;animation:kvshine 6s ease-in-out 3s infinite}
+.kv-bar{transform-origin:bottom;animation:kvbar 3s cubic-bezier(.65,0,.35,1) infinite}
+.kv-bar:nth-child(2){animation-delay:.15s}.kv-bar:nth-child(3){animation-delay:.3s}
+.kv-flow{background:linear-gradient(transparent,#FBB03B,transparent) 0 -8px/2px 8px no-repeat #4A453E}
+.kv-w1{animation:kvw1 5s linear infinite}.kv-w2{animation:kvw2 5s linear infinite}
+@keyframes kvw1{0%,20%{background-position:0 -8px}30%,100%{background-position:0 12px}}
+@keyframes kvw2{0%,48%{background-position:0 -8px}58%,100%{background-position:0 12px}}
+@keyframes kvn1{0%{border-color:#3A3631;box-shadow:0 0 0 3px rgba(251,176,59,0)}5%,22%{border-color:#FBB03B;box-shadow:0 0 0 3px rgba(251,176,59,.15)}8%{scale:1.04}14%{scale:1}32%,100%{border-color:#3A3631;box-shadow:0 0 0 3px rgba(251,176,59,0)}}
+@keyframes kvn2{0%,28%{border-color:#3A3631;box-shadow:0 0 0 3px rgba(251,176,59,0)}33%,50%{border-color:#FBB03B;box-shadow:0 0 0 3px rgba(251,176,59,.15)}36%{scale:1}38%{scale:1.04}44%{scale:1}60%,100%{border-color:#3A3631;box-shadow:0 0 0 3px rgba(251,176,59,0)}}
+@keyframes kvn3{0%,56%{border-color:#3A3631;box-shadow:0 0 0 0 rgba(251,176,59,0)}60%{border-color:#FBB03B;box-shadow:0 0 0 0 rgba(251,176,59,.55);scale:1}63%{scale:1.07}70%{scale:1}78%{box-shadow:0 0 0 10px rgba(251,176,59,0)}90%{border-color:#FBB03B}97%,100%{border-color:#3A3631}}
+@keyframes kvi1{0%{background-color:#2C2925;color:#D9D3C9}5%,22%{background-color:rgba(251,176,59,.22);color:#FBB03B}32%,100%{background-color:#2C2925;color:#D9D3C9}}
+@keyframes kvi2{0%,28%{background-color:#2C2925;color:#D9D3C9}33%,50%{background-color:rgba(251,176,59,.22);color:#FBB03B}60%,100%{background-color:#2C2925;color:#D9D3C9}}
+@keyframes kvi3{0%,56%{background-color:#2C2925;color:#D9D3C9}60%,90%{background-color:#FBB03B;color:#1A1A1A}97%,100%{background-color:#2C2925;color:#D9D3C9}}
+@keyframes kvbadge{0%,62%{scale:0}67%{scale:1.25}72%,88%{scale:1}94%,100%{scale:0}}
+.kv-n1{animation:kvn1 5s ease-out infinite}.kv-n2{animation:kvn2 5s ease-out infinite}.kv-n3{animation:kvn3 5s ease-out infinite}
+.kv-i1{animation:kvi1 5s ease-out infinite}.kv-i2{animation:kvi2 5s ease-out infinite}.kv-i3{animation:kvi3 5s ease-out infinite}
+.kv-badge{position:absolute;top:-5px;right:-5px;width:12px;height:12px;border-radius:999px;background:#F7F3EC;color:#1A1A1A;font-size:8px;font-weight:800;line-height:12px;text-align:center;box-shadow:0 0 0 2px #141414;scale:0;animation:kvbadge 5s ease-out infinite}
+@keyframes kvevt1{0%{opacity:0;translate:-10px 0}6%{opacity:1;translate:0 0;box-shadow:inset 0 0 0 1px rgba(251,176,59,.7)}24%{box-shadow:inset 0 0 0 1px rgba(251,176,59,0)}86%{opacity:1;translate:0 0}94%,100%{opacity:0;translate:0 -4px}}
+@keyframes kvevt2{0%,12%{opacity:0;translate:-10px 0}18%{opacity:1;translate:0 0;box-shadow:inset 0 0 0 1px rgba(251,176,59,.7)}36%{box-shadow:inset 0 0 0 1px rgba(251,176,59,0)}86%{opacity:1;translate:0 0}94%,100%{opacity:0;translate:0 -4px}}
+@keyframes kvevt3{0%,24%{opacity:0;translate:-10px 0}30%{opacity:1;translate:0 0;box-shadow:inset 0 0 0 1px rgba(251,176,59,.7)}48%{box-shadow:inset 0 0 0 1px rgba(251,176,59,0)}86%{opacity:1;translate:0 0}94%,100%{opacity:0;translate:0 -4px}}
+@keyframes kvcheck1{0%,8%{stroke-dashoffset:24}16%{stroke-dashoffset:0}}
+@keyframes kvcheck2{0%,20%{stroke-dashoffset:24}28%{stroke-dashoffset:0}}
+@keyframes kvcheck3{0%,32%{stroke-dashoffset:24}40%{stroke-dashoffset:0}}
+.kv-evt{animation:kvevt1 5s cubic-bezier(.16,1,.3,1) infinite}
+.kv-check path{stroke-dasharray:24;animation:kvcheck1 5s ease-out infinite}
+.kv-evt:nth-child(3){animation-name:kvevt2}.kv-evt:nth-child(3) .kv-check path{animation-name:kvcheck2}
+.kv-evt:nth-child(4){animation-name:kvevt3}.kv-evt:nth-child(4) .kv-check path{animation-name:kvcheck3}
+@keyframes kvshim{to{translate:100% 0}}
+@keyframes kvline{0%{scale:0 1}14%,84%{scale:1 1}94%,100%{scale:0 1}}
+@keyframes kvtap{0%,52%{scale:1;box-shadow:0 0 0 0 rgba(251,176,59,.5)}57%{scale:.9}64%{scale:1.04;box-shadow:0 0 0 7px rgba(251,176,59,0)}72%,100%{scale:1}}
+.kv-shim{position:relative;overflow:hidden}
+.kv-shim::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);translate:-100% 0;animation:kvshim 1.6s ease-in-out infinite}
+.kv-line{transform-origin:left;animation:kvline 5s cubic-bezier(.16,1,.3,1) infinite backwards}
+.kv-line:nth-child(4){animation-delay:.12s}.kv-line:nth-child(5){animation-delay:.24s}.kv-line:nth-child(6){animation-delay:.36s}
+.kv-tap{animation:kvtap 5s ease-out infinite}
+.kv-press{transition:scale .25s cubic-bezier(.16,1,.3,1)}
+.kv-press:active{scale:.97}
+.kv-ans{animation:kvup .5s cubic-bezier(.16,1,.3,1) backwards}
+.kv-modal{box-sizing:border-box;width:calc(100% - 24px);max-width:420px;max-height:calc(100% - 24px);margin:auto auto 12px;padding:0;border:1px solid #34302B;border-radius:24px;background:#232120;color:#F7F3EC;font-family:'Inter',system-ui,sans-serif;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.kv-modal::backdrop{background:rgba(10,10,10,.7);backdrop-filter:blur(6px)}
+.kv-modal[open]{animation:kvsheet .55s cubic-bezier(.16,1,.3,1)}
+.kv-modal[open]::backdrop{animation:kvfade .4s ease}
+@keyframes kvsheet{from{opacity:0;translate:0 48px}}
+@keyframes kvfade{from{opacity:0}}
+@media (min-width:600px){.kv-modal{margin:auto}}
+.kv-field{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#D9D3C9}
+.kv-field input{box-sizing:border-box;width:100%;height:52px;padding:0 16px;border-radius:14px;border:1px solid #3A3631;background:#1A1A1A;color:#F7F3EC;font:500 16px 'Inter',system-ui,sans-serif;transition:border-color .2s,box-shadow .2s}
+.kv-field input::placeholder{color:#6B6358}
+.kv-field input:focus{outline:none;border-color:#FBB03B;box-shadow:0 0 0 3px rgba(251,176,59,.2)}
+.kv-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.kv-modal button:focus-visible{outline:2px solid #FBB03B}
+/* ponytail: scroll-linked effects need animation-timeline (Chrome/Edge/Safari 26+); elsewhere content just shows static */
+@supports (animation-timeline: view()){
+.kv-hero-img{animation:kvsettle 2.2s cubic-bezier(.16,1,.3,1) .75s both,kvkb 18s 2.95s ease-in-out infinite alternate,kvpar linear both;animation-timeline:auto,auto,scroll(root);animation-range:normal,normal,0 80vh}
+.kv-hero-name{animation:kvnameout linear both;animation-timeline:scroll(root);animation-range:0 70vh}
+.kv-reveal{animation:kvup linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+.kv-zoom{animation:kvzoom linear both;animation-timeline:view();animation-range:cover}
+}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.kv-grain{display:none}}
+</style>
+</helmet>
+<div style="min-height: 100%; box-sizing: border-box; padding: 0 16px 48px; background: #1A1A1A; color: #F7F3EC; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<div class="kv-grain" aria-hidden="true"></div>
+<main style="max-width: 460px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<header class="kv-down" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px">
+<a href="https://kvgroupbr.com.br" style="display: flex; align-items: center; gap: 10px; min-height: 44px; color: #F7F3EC; text-decoration: none">
+<img src="./assets/27acfc89d759aca0878d0c2c0ad42c6d.png" alt="KV Group" style="display: block; height: 28px; width: auto">
+</a>
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Vim%20pelo%20link%20da%20bio." style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; box-sizing: border-box; border-radius: 999px; border: 1px solid #3A3631; color: #F7F3EC; font-size: 14px; font-weight: 600; text-decoration: none">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+WhatsApp
+</a>
+</header>
+
+<div class="kv-hero" style="position: relative; width: 100%; max-width: 100%; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; background: #2C2925">
+<img class="kv-hero-img" src="./assets/andrew.webp" alt="Andrew Kavner" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%">
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,26,26,0) 46%, rgba(26,26,26,0.9) 100%)"></div>
+<span class="kv-pop" style="position: absolute; top: 18px; left: 18px; transform: rotate(-4deg); padding: 9px 14px; border-radius: 999px; background: {{accent}}; color: #1A1A1A; font-size: 13px; font-weight: 700; line-height: 1; box-shadow: 0 6px 18px rgba(0,0,0,0.28)">Bem-vindo(a)!</span>
+<h1 class="kv-hero-name" style="position: absolute; left: 20px; right: 20px; bottom: 16px; margin: 0; font-weight: 700; font-size: clamp(52px, 19vw, 80px); line-height: 0.92; letter-spacing: -0.045em; color: #F7F3EC"><span class="kv-rise">Andrew</span><span class="kv-rise">Kavner</span></h1>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p class="kv-up" style="animation-delay: 1.75s; margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600; color: #F7F3EC; text-wrap: balance">Gestor de tráfego e especialista em Marketing Tech</p>
+<p class="kv-up" style="animation-delay: 1.9s; margin: 0; font-size: 15px; line-height: 1.55; color: #B4ADA2">Anúncios no Meta e no Google com rastreamento completo, para você saber de onde vem cada cliente.</p>
+</div>
+</div>
+
+<section aria-label="Links" style="display: flex; flex-direction: column; gap: 12px">
+<p class="kv-reveal" style="margin: 0 0 4px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #F7F3EC">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+Escolha por onde começar
+</p>
+
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Quero%20um%20diagn%C3%B3stico%20das%20minhas%20campanhas." class="kv-reveal kv-shine kv-press" style="display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 24px; background: {{accent}}; color: #1A1A1A; text-decoration: none">
+<h2 style="margin: 0; font-weight: 700; font-size: 27px; line-height: 1.08; letter-spacing: -0.025em; color: #1A1A1A; text-wrap: balance">Quer vender mais com anúncios?</h2>
+<div style="display: flex; gap: 16px; align-items: flex-end">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #2E2618">Gestão de Meta Ads e Google Ads com foco em faturamento. Comece com um diagnóstico da sua conta.</p>
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; box-sizing: border-box; border-radius: 999px; background: #1A1A1A; color: #F7F3EC; font-size: 14px; font-weight: 600">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+Pedir diagnóstico
+</span>
+</div>
+<div aria-hidden="true" style="flex: 0 0 112px; display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; background: #FFFCF5; box-shadow: 0 12px 24px rgba(26,26,26,0.2); transform: rotate(3deg)">
+<div style="display: flex; align-items: center; gap: 6px; padding: 8px">
+<span style="flex: 0 0 18px; height: 18px; border-radius: 999px; background: #1A1A1A; color: {{accent}}; display: flex; align-items: center; justify-content: center; font-size: 7px; font-weight: 800"><img src="./assets/291c176ac68a34fd55db03592867fe3f.png" alt="" style="display: block; width: 11px; height: auto"></span>
+<span style="display: flex; flex-direction: column; gap: 1px; min-width: 0">
+<span style="font-size: 9px; font-weight: 700; line-height: 1.1; color: #1A1A1A">kvgroup</span>
+<span style="font-size: 8px; line-height: 1.1; color: #6B6358">Patrocinado</span>
+</span>
+</div>
+<div style="height: 76px; box-sizing: border-box; padding-bottom: 14px; background: #1A1A1A; display: flex; align-items: flex-end; justify-content: center; gap: 6px">
+<span class="kv-bar" style="width: 12px; height: 14px; border-radius: 3px; background: {{accent}}; opacity: 0.45"></span>
+<span class="kv-bar" style="width: 12px; height: 26px; border-radius: 3px; background: {{accent}}; opacity: 0.7"></span>
+<span class="kv-bar" style="width: 12px; height: 40px; border-radius: 3px; background: {{accent}}"></span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 8px; border-top: 1px solid #EDE6D8">
+<span style="font-size: 10px; font-weight: 600; color: #1A1A1A">Saiba mais</span>
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+</div>
+</div>
+</div>
+</a>
+
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Quero%20saber%20sobre%20rastreamento%20server-side." class="kv-reveal kv-press" style="display: flex; gap: 16px; align-items: stretch; padding: 18px; border-radius: 20px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
+<div aria-hidden="true" style="flex: 0 0 116px; display: flex; flex-direction: column; gap: 6px; padding: 10px 8px; box-sizing: border-box; border-radius: 14px; background: #141414; border: 1px solid #2E2B27">
+<div style="display: flex; align-items: center; gap: 6px; padding: 0 2px 2px; font-size: 10px; font-weight: 600; color: #B4ADA2">
+<span style="flex: 0 0 7px; height: 7px; border-radius: 999px; background: {{accent}}; animation: kvpulse 2.4s ease-out infinite"></span>
+Eventos
+</div>
+<div class="kv-evt" style="display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 7px 8px; border-radius: 9px; background: #232120">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 11px; font-weight: 600; line-height: 1.1; color: #F7F3EC">PageView</span>
+<span style="font-size: 9px; line-height: 1.1; color: #A39C90">Navegador</span>
+</span>
+<svg class="kv-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A39C90" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+<div class="kv-evt" style="display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 7px 8px; border-radius: 9px; background: #232120">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 11px; font-weight: 600; line-height: 1.1; color: #F7F3EC">Lead</span>
+<span style="font-size: 9px; line-height: 1.1; color: {{accent}}">Servidor</span>
+</span>
+<svg class="kv-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+<div class="kv-evt" style="display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 7px 8px; border-radius: 9px; background: #232120">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 11px; font-weight: 600; line-height: 1.1; color: #F7F3EC">Purchase</span>
+<span style="font-size: 9px; line-height: 1.1; color: {{accent}}">Servidor</span>
+</span>
+<svg class="kv-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+</div>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.15; letter-spacing: -0.015em; color: #F7F3EC">Rastreamento server-side</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #B4ADA2">API de Conversões e GA4 configuradas para nenhuma venda sumir do relatório.</p>
+<span style="margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: {{accent}}">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+Medir minhas vendas
+</span>
+</div>
+</a>
+
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Quero%20automatizar%20o%20atendimento%20dos%20meus%20leads." class="kv-reveal kv-press" style="display: flex; gap: 16px; align-items: stretch; padding: 18px; border-radius: 20px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.15; letter-spacing: -0.015em; color: #F7F3EC">Automações com n8n</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #B4ADA2">O lead do anúncio chega no seu CRM e no WhatsApp da equipe em segundos, sem planilha.</p>
+<span style="margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: {{accent}}">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+Automatizar leads
+</span>
+</div>
+<div aria-hidden="true" style="flex: 0 0 116px; display: flex; flex-direction: column; justify-content: center; padding: 10px 8px; box-sizing: border-box; border-radius: 14px; background: #141414; border: 1px solid #2E2B27">
+<div class="kv-n1" style="display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 10px; background: #232120; border: 1px solid #3A3631">
+<span class="kv-i1" style="flex: 0 0 20px; height: 20px; border-radius: 6px; background: #2C2925; color: #D9D3C9; display: flex; align-items: center; justify-content: center">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2" fill="none"></rect><path d="M9 8h6"></path><path d="M9 12h6"></path><path d="M9 16h4"></path></svg>
+</span>
+<span style="font-size: 10.5px; font-weight: 600; color: #F7F3EC">Formulário</span>
+</div>
+<span class="kv-flow kv-w1" style="align-self: center; width: 2px; height: 12px"></span>
+<div class="kv-n2" style="display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 10px; background: #232120; border: 1px solid #3A3631">
+<span class="kv-i2" style="flex: 0 0 20px; height: 20px; border-radius: 6px; background: #2C2925; color: #D9D3C9; display: flex; align-items: center; justify-content: center">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4" fill="none"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</span>
+<span style="font-size: 10.5px; font-weight: 600; color: #F7F3EC">CRM</span>
+</div>
+<span class="kv-flow kv-w2" style="align-self: center; width: 2px; height: 12px"></span>
+<div class="kv-n3" style="display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 10px; background: #232120; border: 1px solid {{accent}}">
+<span class="kv-i3" style="position: relative; flex: 0 0 20px; height: 20px; border-radius: 6px; background: {{accent}}; color: #1A1A1A; display: flex; align-items: center; justify-content: center">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg><span class="kv-badge" aria-hidden="true">1</span>
+</span>
+<span style="font-size: 10.5px; font-weight: 600; color: #F7F3EC">WhatsApp</span>
+</div>
+</div>
+</a>
+
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Quero%20um%20or%C3%A7amento%20de%20site%20ou%20landing%20page." class="kv-reveal kv-press" style="display: flex; gap: 16px; align-items: stretch; padding: 18px; border-radius: 20px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
+<div aria-hidden="true" style="flex: 0 0 116px; display: flex; align-items: center; justify-content: center; padding: 12px 0; box-sizing: border-box; border-radius: 14px; background: #141414; border: 1px solid #2E2B27">
+<div style="width: 78px; display: flex; flex-direction: column; gap: 6px; padding: 9px 8px 10px; box-sizing: border-box; border-radius: 14px; border: 2px solid #4A453E; background: #1A1A1A">
+<span style="align-self: center; width: 22px; height: 4px; border-radius: 999px; background: #3A3631"></span>
+<span class="kv-shim" style="height: 40px; border-radius: 6px; background: #2C2925"></span>
+<span class="kv-line" style="width: 92%; height: 6px; border-radius: 999px; background: #F7F3EC"></span>
+<span class="kv-line" style="width: 68%; height: 6px; border-radius: 999px; background: #F7F3EC"></span>
+<span class="kv-line" style="width: 86%; height: 4px; border-radius: 999px; background: #5A544B"></span>
+<span class="kv-line" style="width: 58%; height: 4px; border-radius: 999px; background: #5A544B"></span>
+<span class="kv-tap" style="margin-top: 2px; height: 18px; border-radius: 999px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; color: #1A1A1A">Agendar</span>
+</div>
+</div>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.15; letter-spacing: -0.015em; color: #F7F3EC">Sites e landing pages</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #B4ADA2">Páginas rápidas, com pixel e conversões configurados desde o primeiro dia.</p>
+<span style="margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: {{accent}}">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+Pedir orçamento
+</span>
+</div>
+</a>
+
+<a href="https://kvgroupbr.com.br" class="kv-reveal kv-press" style="display: flex; align-items: center; gap: 14px; padding: 14px 16px 14px 14px; border-radius: 16px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
+<span aria-hidden="true" style="flex: 0 0 44px; height: 44px; border-radius: 12px; background: {{accent}}; color: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; letter-spacing: -0.02em"><img src="./assets/d2a746f08d7e224a3958692e97ca5aaf.png" alt="" style="display: block; width: 24px; height: auto"></span>
+<span style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 16px; font-weight: 600; color: #F7F3EC">Conheça a KV Group</span>
+<span style="font-size: 13px; color: #B4ADA2">kvgroupbr.com.br</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B4ADA2" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+</a>
+
+<div class="kv-reveal" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<a href="https://www.linkedin.com/in/SEU-PERFIL" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; border: 1px solid #3A3631; color: #F7F3EC; font-size: 14px; font-weight: 600; text-decoration: none">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" fill="none"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+LinkedIn
+</a>
+<a href="mailto:SEU-EMAIL" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; border: 1px solid #3A3631; color: #F7F3EC; font-size: 14px; font-weight: 600; text-decoration: none">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" fill="none"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+E-mail
+</a>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="kv-reveal" style="margin: 0; font-weight: 700; font-size: 36px; line-height: 1.05; letter-spacing: -0.035em; color: #F7F3EC">Sobre mim</h2>
+<p class="kv-reveal" style="margin: 0; font-size: 15px; line-height: 1.6; color: #D9D3C9">Sou Andrew Kavner, gestor de tráfego e especialista em Marketing Tech em Manaus. Cuido das campanhas no Meta e no Google e de tudo que está por trás delas: rastreamento server-side, automações e as páginas onde o clique vira contato.</p>
+<p class="kv-reveal" style="margin: 0; font-size: 15px; line-height: 1.6; color: #D9D3C9">Na KV Group, ajudo empresas a crescer com anúncios medidos do clique até a venda.</p>
+<ul aria-label="Ferramentas" class="kv-reveal" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px">
+<li style="padding: 7px 12px; border-radius: 999px; border: 1px solid #3A3631; font-size: 13px; font-weight: 500; color: #D9D3C9">Meta Ads</li>
+<li style="padding: 7px 12px; border-radius: 999px; border: 1px solid #3A3631; font-size: 13px; font-weight: 500; color: #D9D3C9">Google Ads</li>
+<li style="padding: 7px 12px; border-radius: 999px; border: 1px solid #3A3631; font-size: 13px; font-weight: 500; color: #D9D3C9">API de Conversões</li>
+<li style="padding: 7px 12px; border-radius: 999px; border: 1px solid #3A3631; font-size: 13px; font-weight: 500; color: #D9D3C9">GA4</li>
+<li style="padding: 7px 12px; border-radius: 999px; border: 1px solid #3A3631; font-size: 13px; font-weight: 500; color: #D9D3C9">n8n</li>
+</ul>
+<div class="kv-reveal" style="position: relative; aspect-ratio: 16 / 10; border-radius: 22px; overflow: clip; background: #2C2925">
+<img class="kv-zoom" src="./assets/andrew-trabalhando.webp" alt="Andrew Kavner trabalhando no notebook" loading="lazy" style="position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%">
+</div>
+</section>
+
+<section class="kv-reveal" style="display: flex; flex-direction: column; padding: 28px 20px 8px; border-radius: 28px; background: {{accent}}; color: #1A1A1A">
+<h2 style="margin: 0 0 12px; font-weight: 700; font-size: 36px; line-height: 1.05; letter-spacing: -0.035em; color: #1A1A1A">Dúvidas comuns</h2>
+
+<div style="border-top: 1px solid rgba(26,26,26,0.22)">
+<button type="button" onClick="{{ t1 }}" aria-expanded="{{ q1 }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.35; color: #1A1A1A">
+<span>Quanto preciso investir em anúncios?</span>
+<span style="flex: 0 0 28px; height: 28px; border-radius: 999px; background: #1A1A1A; color: {{accent}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{ q1 }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></sc-if>
+<sc-if value="{{ q1c }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></sc-if>
+</span>
+</button>
+<sc-if value="{{ q1 }}" hint-placeholder-val="{{ true }}">
+<p class="kv-ans" style="margin: 0; padding: 0 36px 18px 0; font-size: 15px; line-height: 1.55; color: #3A3020">Depende do seu objetivo, da sua região e do valor do que você vende. No diagnóstico eu analiso o seu negócio e sugiro uma verba inicial que faça sentido para o seu momento.</p>
+</sc-if>
+</div>
+
+<div style="border-top: 1px solid rgba(26,26,26,0.22)">
+<button type="button" onClick="{{ t2 }}" aria-expanded="{{ q2 }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.35; color: #1A1A1A">
+<span>Em quanto tempo vejo resultado?</span>
+<span style="flex: 0 0 28px; height: 28px; border-radius: 999px; background: #1A1A1A; color: {{accent}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{ q2 }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></sc-if>
+<sc-if value="{{ q2c }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></sc-if>
+</span>
+</button>
+<sc-if value="{{ q2 }}" hint-placeholder-val="{{ false }}">
+<p class="kv-ans" style="margin: 0; padding: 0 36px 18px 0; font-size: 15px; line-height: 1.55; color: #3A3020">Os primeiros dados aparecem já na primeira semana de campanha. A partir daí, cada ajuste é feito com base nos números, e você acompanha tudo em relatórios fáceis de ler.</p>
+</sc-if>
+</div>
+
+<div style="border-top: 1px solid rgba(26,26,26,0.22)">
+<button type="button" onClick="{{ t3 }}" aria-expanded="{{ q3 }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.35; color: #1A1A1A">
+<span>Você atende fora de Manaus?</span>
+<span style="flex: 0 0 28px; height: 28px; border-radius: 999px; background: #1A1A1A; color: {{accent}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{ q3 }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></sc-if>
+<sc-if value="{{ q3c }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></sc-if>
+</span>
+</button>
+<sc-if value="{{ q3 }}" hint-placeholder-val="{{ false }}">
+<p class="kv-ans" style="margin: 0; padding: 0 36px 18px 0; font-size: 15px; line-height: 1.55; color: #3A3020">Sim. O atendimento é online, com reuniões por vídeo e acompanhamento pelo WhatsApp.</p>
+</sc-if>
+</div>
+
+<div style="border-top: 1px solid rgba(26,26,26,0.22)">
+<button type="button" onClick="{{ t4 }}" aria-expanded="{{ q4 }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.35; color: #1A1A1A">
+<span>O que é rastreamento server-side?</span>
+<span style="flex: 0 0 28px; height: 28px; border-radius: 999px; background: #1A1A1A; color: {{accent}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{ q4 }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></sc-if>
+<sc-if value="{{ q4c }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></sc-if>
+</span>
+</button>
+<sc-if value="{{ q4 }}" hint-placeholder-val="{{ false }}">
+<p class="kv-ans" style="margin: 0; padding: 0 36px 18px 0; font-size: 15px; line-height: 1.55; color: #3A3020">É enviar as conversões do seu site direto do servidor para o Meta e o Google. Assim, bloqueadores de anúncio e as restrições do iPhone deixam de apagar vendas do relatório, e as campanhas otimizam com dados completos.</p>
+</sc-if>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="kv-reveal" style="margin: 0; font-weight: 700; font-size: 32px; line-height: 1.1; letter-spacing: -0.035em; color: #F7F3EC; text-wrap: balance">Vamos conversar sobre o seu negócio?</h2>
+<p class="kv-reveal" style="margin: 0; font-size: 15px; line-height: 1.55; color: #B4ADA2">Me chama no WhatsApp e me conta o que você vende. Eu respondo com os próximos passos.</p>
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Vim%20pelo%20link%20da%20bio%20e%20quero%20conversar%20sobre%20meu%20neg%C3%B3cio." onClick="{{ leadOpen }}" aria-haspopup="dialog" class="kv-reveal kv-shine kv-press" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border-radius: 999px; background: {{accent}}; color: #1A1A1A; font-size: 16px; font-weight: 700; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+Falar no WhatsApp
+</a>
+</section>
+
+<footer class="kv-reveal" style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #34302B; font-size: 13px; color: #A39C90">
+<span>© 2026 KV Group</span>
+<span>Manaus, AM</span>
+</footer>
+
+<dialog id="kv-lead" class="kv-modal" aria-labelledby="kv-lead-title" onClick="{{ leadBackdrop }}">
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 24px 20px 20px">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px">
+<h2 id="kv-lead-title" style="margin: 0; font-weight: 700; font-size: 24px; line-height: 1.12; letter-spacing: -0.025em; color: #F7F3EC; text-wrap: balance">Antes da gente conversar, me passa seu contato</h2>
+<button type="button" onClick="{{ leadClose }}" aria-label="Fechar" style="flex: 0 0 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid #3A3631; background: transparent; color: #D9D3C9; cursor: pointer">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+</button>
+</div>
+
+<sc-if value="{{ leadForm }}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B4ADA2">Deixa seu nome e WhatsApp aqui que eu mesmo te mando uma mensagem em instantes.</p>
+<form onSubmit="{{ leadSubmit }}" onInput="{{ leadInput }}" noValidate style="display: flex; flex-direction: column; gap: 14px">
+<label class="kv-field">Seu nome
+<input name="nome" type="text" autocomplete="name" placeholder="Como posso te chamar?" maxlength="80" required>
+</label>
+<label class="kv-field">Seu WhatsApp
+<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(92) 99999-9999" maxlength="20" required>
+</label>
+<label class="kv-hp" aria-hidden="true">Empresa<input name="empresa" type="text" tabindex="-1" autocomplete="off"></label>
+<sc-if value="{{ leadError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(229,72,77,0.12); font-size: 14px; line-height: 1.45; color: #F2A7A9">{{ leadMsg }}</p>
+</sc-if>
+<button type="submit" disabled="{{ leadSending }}" class="kv-press" style="margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border: 0; border-radius: 999px; background: {{accent}}; color: #1A1A1A; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+{{ leadBtn }}
+</button>
+<p style="margin: 0; font-size: 12px; line-height: 1.5; color: #8F887D; text-align: center">Seus dados ficam só comigo. Ao enviar, você aceita receber minha mensagem no WhatsApp.</p>
+</form>
+<a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20Andrew!%20Vim%20pelo%20link%20da%20bio%20e%20quero%20conversar%20sobre%20meu%20neg%C3%B3cio." style="align-self: center; padding: 6px 4px; font-size: 13px; font-weight: 600; color: #D9D3C9; text-decoration: underline; text-underline-offset: 3px">Prefiro chamar agora no WhatsApp</a>
+</sc-if>
+
+<sc-if value="{{ leadDone }}" hint-placeholder-val="{{ false }}">
+<div role="status" class="kv-ans" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<span style="width: 48px; height: 48px; border-radius: 999px; background: {{accent}}; color: #1A1A1A; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p style="margin: 0; font-size: 20px; font-weight: 700; color: #F7F3EC">Pronto, {{ leadFirst }}!</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B4ADA2">Já já te chamo no WhatsApp. Fica de olho aí no celular.</p>
+<button type="button" onClick="{{ leadClose }}" style="align-self: stretch; margin-top: 4px; min-height: 52px; border-radius: 999px; border: 1px solid #3A3631; background: transparent; color: #F7F3EC; font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Fechar</button>
+</div>
+</sc-if>
+</div>
+</dialog>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FBB03B","options":["#FBB03B","#FFD27A","#EDE7DC"]},"$preview":{"width":390,"height":3660}}'>
+// Webhook do n8n que recebe o lead (nó Webhook, método POST).
+var LEAD_WEBHOOK = 'https://webhook.kvgroupbr.com.br/webhook/link_na_bio';
+// Evento personalizado do Meta Pixel disparado quando o lead chega no n8n.
+var PIXEL_EVENT = 'LeadLinkNaBio';
+var cookie = function (n) { var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : ''; };
+
+class Component extends DCLogic {
+  renderVals() {
+    var self = this;
+    var st = self.state || {};
+    var lead = st.lead || 'idle';
+    var dialog = function () { return document.getElementById('kv-lead'); };
+    var fail = function (msg) { self.setState({ lead: 'error', leadMsg: msg }); };
+    var leadSubmit = function (e) {
+      e.preventDefault();
+      if (lead === 'sending') return;
+      var f = e.currentTarget.elements;
+      var nome = f.nome.value.trim().replace(/\s+/g, ' ');
+      var digits = f.whatsapp.value.replace(/\D/g, '');
+      if (digits.length >= 12 && digits.indexOf('55') === 0) digits = digits.slice(2);
+      if (nome.length < 2) return fail('Me diz seu nome pra eu saber com quem estou falando.');
+      if (digits.length < 10 || digits.length > 11) return fail('Confere o WhatsApp com DDD, por exemplo (92) 99999-9999.');
+      var first = nome.split(' ')[0];
+      // Honeypot: robô preenche o campo escondido; finge sucesso e não envia.
+      if (f.empresa.value) return self.setState({ lead: 'done', leadFirst: first });
+      self.setState({ lead: 'sending' });
+      // Formulário (x-www-form-urlencoded) em vez de JSON: o navegador não faz
+      // pré-checagem CORS (OPTIONS) e o n8n já entrega os campos em $json.body.
+      // UTMs e outros parâmetros da URL vão junto como campos próprios.
+      var body = new URLSearchParams(location.search);
+      body.set('nome', nome);
+      body.set('whatsapp', '55' + digits);
+      body.set('whatsapp_digitado', f.whatsapp.value);
+      body.set('origem', 'link-na-bio');
+      body.set('pagina', location.href);
+      body.set('enviado_em', new Date().toISOString());
+      // Mesmo event_id no Pixel e no n8n: a Meta deduplica se o n8n reenviar via API de Conversões.
+      var eventId = crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2);
+      body.set('event_id', eventId);
+      body.set('event_name', PIXEL_EVENT);
+      body.set('fbp', cookie('_fbp'));
+      body.set('fbc', cookie('_fbc'));
+      fetch(LEAD_WEBHOOK, {
+        method: 'POST',
+        signal: AbortSignal.timeout(12000),
+        body: body
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        // Sem dados pessoais nos parâmetros do Pixel (regra da Meta); nome e telefone ficam só no n8n.
+        if (window.fbq) fbq('trackCustom', PIXEL_EVENT, { origem: 'link-na-bio' }, { eventID: eventId });
+        self.setState({ lead: 'done', leadFirst: first });
+      }).catch(function () {
+        fail('Não consegui enviar agora. Tenta de novo ou me chama direto no WhatsApp aqui embaixo.');
+      });
+    };
+    var current = function () {
+      return (self.state && typeof self.state.open === 'number') ? self.state.open : 0;
+    };
+    var open = current();
+    var toggle = function (i) {
+      return function () {
+        self.setState({ open: current() === i ? -1 : i });
+      };
+    };
+    return {
+      accent: this.props.accent ?? '#FBB03B',
+      q1: open === 0, q1c: open !== 0, t1: toggle(0),
+      q2: open === 1, q2c: open !== 1, t2: toggle(1),
+      q3: open === 2, q3c: open !== 2, t3: toggle(2),
+      q4: open === 3, q4c: open !== 3, t4: toggle(3),
+      leadOpen: function (e) {
+        var d = dialog();
+        if (!d || !d.showModal) return; // sem suporte a <dialog>: segue o link do WhatsApp
+        e.preventDefault();
+        if (lead === 'error') self.setState({ lead: 'idle' });
+        d.showModal();
+      },
+      leadClose: function () { dialog().close(); },
+      leadBackdrop: function (e) { if (e.target === e.currentTarget) e.currentTarget.close(); },
+      leadSubmit: leadSubmit,
+      leadInput: function () { if (lead === 'error') self.setState({ lead: 'idle' }); },
+      leadForm: lead !== 'done',
+      leadDone: lead === 'done',
+      leadError: lead === 'error',
+      leadMsg: st.leadMsg || '',
+      leadSending: lead === 'sending',
+      leadBtn: lead === 'sending' ? 'Enviando…' : 'Quero que você me chame',
+      leadFirst: st.leadFirst || ''
+    };
+  }
+}
+</script>
+</body>
+</html>
