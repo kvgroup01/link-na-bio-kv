@@ -95,6 +95,22 @@ button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px;border-radius:
 .kv-line{transform-origin:left;animation:kvline 5s cubic-bezier(.16,1,.3,1) infinite backwards}
 .kv-line:nth-child(4){animation-delay:.12s}.kv-line:nth-child(5){animation-delay:.24s}.kv-line:nth-child(6){animation-delay:.36s}
 .kv-tap{animation:kvtap 5s ease-out infinite}
+@keyframes kvurl{0%,2%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(16,end)}24%,88%{clip-path:inset(0 0 0 0)}96%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes kvload{0%,24%{scale:0 1;opacity:1}34%{scale:1 1;opacity:1}40%,100%{scale:1 1;opacity:0}}
+@keyframes kvpg{0%,36%{opacity:0;translate:0 4px}42%,88%{opacity:1;translate:0 0}96%,100%{opacity:0;translate:0 0}}
+@keyframes kvpgline{0%,40%{scale:0 1}48%,88%{scale:1 1}96%,100%{scale:0 1}}
+@keyframes kvpgbtn{0%,50%{opacity:0;translate:0 4px}56%{opacity:1;translate:0 0}70%{scale:1;box-shadow:0 0 0 0 rgba(251,176,59,.55)}73%{scale:.9}78%{scale:1.04;box-shadow:0 0 0 6px rgba(251,176,59,0)}84%,88%{scale:1;opacity:1}96%,100%{opacity:0}}
+@keyframes kvcur{0%,56%{opacity:0;translate:26px 20px}60%{opacity:1;translate:26px 20px}70%{translate:0 0;scale:1}73%{scale:.8}76%{scale:1}86%{opacity:1;translate:0 0}92%,100%{opacity:0;translate:0 0}}
+.kv-url{animation:kvurl 5s infinite}
+.kv-load{transform-origin:left;animation:kvload 5s ease-out infinite}
+.kv-pg{animation:kvpg 5s cubic-bezier(.16,1,.3,1) infinite}
+.kv-pgline{transform-origin:left;animation:kvpgline 5s cubic-bezier(.16,1,.3,1) infinite}
+.kv-pgline+.kv-pgline{animation-delay:.12s}.kv-pgline+.kv-pgline+.kv-pgline{animation-delay:.24s}
+.kv-pgbtn{animation:kvpgbtn 5s ease-out infinite}
+.kv-cur{animation:kvcur 5s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes kvbgk{0%,34%{opacity:0;translate:16px 0}48%,88%{opacity:1;translate:0 0}96%,100%{opacity:0;translate:0 0}}
+.kv-bgk{animation:kvbgk 5s cubic-bezier(.16,1,.3,1) infinite}
+.kv-hl{display:block;animation:kvpg 5s cubic-bezier(.16,1,.3,1) infinite}
 .kv-press{transition:scale .25s cubic-bezier(.16,1,.3,1)}
 .kv-press:active{scale:.97}
 .kv-ans{animation:kvup .5s cubic-bezier(.16,1,.3,1) backwards}
@@ -116,8 +132,7 @@ button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px;border-radius:
 .kv-hero-img{animation:kvsettle 2.2s cubic-bezier(.16,1,.3,1) .75s both,kvkb 18s 2.95s ease-in-out infinite alternate,kvpar linear both;animation-timeline:auto,auto,scroll(root);animation-range:normal,normal,0 80vh}
 .kv-hero-name{animation:kvnameout linear both;animation-timeline:scroll(root);animation-range:0 70vh}
 .kv-reveal{animation:kvup linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
-.kv-zoom{animation:kvzoom linear both;animation-timeline:view();animation-range:cover}
-}
+.kv-zoom{animation:kvzoom linear both;animation-timeline:view();animation-range:cover}}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.kv-grain{display:none}}
 </style>
 </helmet>
@@ -279,25 +294,47 @@ Pedir orçamento
 </div>
 </a>
 
-<a href="https://kvgroupbr.com.br" class="kv-reveal kv-press" style="display: flex; align-items: center; gap: 14px; padding: 14px 16px 14px 14px; border-radius: 16px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
-<span aria-hidden="true" style="flex: 0 0 44px; height: 44px; border-radius: 12px; background: {{accent}}; color: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; letter-spacing: -0.02em"><img src="./assets/d2a746f08d7e224a3958692e97ca5aaf.png" alt="" style="display: block; width: 24px; height: auto"></span>
-<span style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 2px">
-<span style="font-size: 16px; font-weight: 600; color: #F7F3EC">Conheça a KV Group</span>
-<span style="font-size: 13px; color: #B4ADA2">kvgroupbr.com.br</span>
+<a href="https://kvgroupbr.com.br" class="kv-reveal kv-press" style="display: flex; gap: 16px; align-items: stretch; padding: 18px; border-radius: 20px; background: #232120; border: 1px solid #34302B; color: #F7F3EC; text-decoration: none">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.15; letter-spacing: -0.015em; color: #F7F3EC">Conheça a KV Group</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #B4ADA2">Anúncios, rastreamento e automação num só lugar, para crescer medindo cada venda.</p>
+<span style="margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: {{accent}}">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+Visitar site
 </span>
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B4ADA2" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
-</a>
-
-<div class="kv-reveal" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-<a href="https://www.linkedin.com/in/SEU-PERFIL" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; border: 1px solid #3A3631; color: #F7F3EC; font-size: 14px; font-weight: 600; text-decoration: none">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" fill="none"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-LinkedIn
-</a>
-<a href="mailto:SEU-EMAIL" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; border: 1px solid #3A3631; color: #F7F3EC; font-size: 14px; font-weight: 600; text-decoration: none">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" fill="none"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-E-mail
-</a>
 </div>
+<div aria-hidden="true" style="flex: 0 0 116px; display: flex; flex-direction: column; justify-content: center; padding: 10px 8px; box-sizing: border-box; border-radius: 14px; background: #141414; border: 1px solid #2E2B27">
+<div style="position: relative; display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; background: #1A1A1A; border: 1px solid #3A3631">
+<div style="display: flex; align-items: center; padding: 5px 6px; background: #232120; border-bottom: 1px solid #2E2B27">
+<span style="flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 3px; height: 14px; padding: 0 5px; border-radius: 999px; background: #141414; overflow: hidden">
+<svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#8F887D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><rect x="5" y="11" width="14" height="10" rx="2" fill="none"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+<span class="kv-url" style="font-size: 7.5px; font-weight: 600; line-height: 1; white-space: nowrap; color: #D9D3C9">kvgroupbr.com.br</span>
+</span>
+</div>
+<span class="kv-load" style="height: 2px; background: {{accent}}; opacity: 0"></span>
+<div style="position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 5px; padding: 5px 5px 9px; background: #FFFFFF">
+<span class="kv-bgk" style="position: absolute; right: -18px; top: 30px"><img src="./assets/d2a746f08d7e224a3958692e97ca5aaf.png" alt="" style="display: block; width: 72px; height: auto; opacity: 0.06"></span>
+<div class="kv-pg" style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 4px 5px; border-radius: 5px; background: #141414">
+<img src="./assets/27acfc89d759aca0878d0c2c0ad42c6d.png" alt="" style="display: block; height: 6px; width: auto">
+<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#F7F3EC" stroke-width="2.6" stroke-linecap="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg>
+</div>
+<div class="kv-pg" style="position: relative; animation-delay: .1s; display: flex; align-items: center; gap: 3px; margin-top: 3px; padding-left: 2px">
+<img src="./assets/291c176ac68a34fd55db03592867fe3f.png" alt="" style="display: block; width: 6px; height: auto">
+<span style="width: 44px; height: 2px; border-radius: 999px; background: #A8A8A8"></span>
+</div>
+<span style="position: relative; padding-left: 2px; font-family: 'Inter', system-ui, sans-serif; font-size: 9.5px; font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; color: #0B0B0B">
+<span class="kv-hl" style="animation-delay: .2s">Transformando</span>
+<span class="kv-hl" style="animation-delay: .3s">negócios com</span>
+<span class="kv-hl" style="animation-delay: .4s">tecnologia.</span>
+</span>
+<span class="kv-pgline" style="position: relative; margin: 1px 0 0 2px; width: 82%; height: 2.5px; border-radius: 999px; background: #9A9A9A"></span>
+<span class="kv-pgline" style="position: relative; margin-left: 2px; width: 58%; height: 2.5px; border-radius: 999px; background: #9A9A9A"></span>
+<span class="kv-pgbtn" style="position: relative; margin: 3px 0 0 2px; align-self: flex-start; padding: 4px 7px; border-radius: 999px; background: {{accent}}; font-size: 7px; font-weight: 600; line-height: 1; white-space: nowrap; color: #1A1A1A">Falar com especialista</span>
+<svg class="kv-cur" width="13" height="13" viewBox="0 0 24 24" style="position: absolute; left: 50px; bottom: 3px; opacity: 0"><path d="M4 3l15 7-6.5 2L10 19z" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+</div>
+</a>
 </section>
 
 <section style="display: flex; flex-direction: column; gap: 16px">
